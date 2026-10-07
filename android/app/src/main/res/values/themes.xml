@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.NIA" parent="android:Theme.Material.NoTitleBar.Fullscreen">
+    <style name="Theme.NIA" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
         <item name="android:windowBackground">@color/nia_background</item>
         <item name="android:statusBarColor">@color/nia_background</item>
         <item name="android:navigationBarColor">@color/nia_background</item>
