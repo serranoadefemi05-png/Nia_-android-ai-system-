@@ -32,7 +32,7 @@ android {
         buildConfigField(
             "String",
             "NIA_BACKEND_URL",
-            "\"${project.findProperty("NIA_BACKEND_URL") ?: "http://10.0.2.2:8000"}\"",
+            "\"${project.findProperty("NIA_BACKEND_URL") ?: "https://nia-android-ai-system.onrender.com"}\"",
         )
     }
 
