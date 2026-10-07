@@ -21,7 +21,7 @@ from typing import Optional
 
 import httpx
 
-from ..core.security import wrap_external_content, check_ssrf
+from ..core.security import wrap_external_content, validate_web_url
 from .provider import BrowserAgentProvider, BrowserResult, BrowserProviderError
 
 logger = logging.getLogger("nia.browser_agent.basic")
@@ -73,7 +73,7 @@ class BasicProvider(BrowserAgentProvider):
 
         # SSRF check
         try:
-            check_ssrf(start_url)
+            validate_web_url(start_url)
         except ValueError as exc:
             raise BrowserProviderError(f"SSRF check failed: {exc}") from exc
 
