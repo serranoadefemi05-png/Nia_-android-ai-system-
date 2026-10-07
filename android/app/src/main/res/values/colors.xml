@@ -2,6 +2,7 @@
 <resources>
     <!-- NIA brand palette -->
     <color name="nia_background">#FF080D18</color>
+    <color name="nia_icon_background">#FF080D18</color>
     <color name="nia_surface">#FF0F1726</color>
     <color name="nia_cyan">#FF67E8F9</color>
     <color name="nia_cyan_dim">#1467E8F9</color>
