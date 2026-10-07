@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- NIA brand palette -->
+    <color name="nia_background">#FF080D18</color>
+    <color name="nia_surface">#FF0F1726</color>
+    <color name="nia_cyan">#FF67E8F9</color>
+    <color name="nia_cyan_dim">#1467E8F9</color>
+    <color name="nia_text_primary">#FFE2E8F0</color>
+    <color name="nia_text_secondary">#FF94A3B8</color>
+    <color name="nia_text_muted">#FF475569</color>
+    <color name="nia_green">#FF10B981</color>
+    <color name="nia_amber">#FFF59E0B</color>
+    <color name="nia_red">#FFEF4444</color>
+    <color name="nia_border">#0DFFFFFF</color>
+</resources>

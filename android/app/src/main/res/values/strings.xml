@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NIA</string>
+    <string name="app_description">Your Android, with an AI brain.</string>
+
+    <!-- Voice states -->
+    <string name="state_idle">Tap to speak</string>
+    <string name="state_listening">Listening…</string>
+    <string name="state_processing">Thinking…</string>
+    <string name="state_speaking">Speaking…</string>
+    <string name="state_done">Done</string>
+    <string name="state_confirming">Awaiting confirmation</string>
+    <string name="state_error">Try again</string>
+
+    <!-- Permissions -->
+    <string name="perm_mic_rationale">NIA needs the microphone to hear your voice commands.</string>
+    <string name="perm_mic_denied">Microphone permission denied. Tap the mic icon to grant it.</string>
+
+    <!-- Errors -->
+    <string name="error_backend_unavailable">NIA backend is not reachable. Check your backend URL in settings.</string>
+    <string name="error_network_timeout">Request timed out. Check your connection.</string>
+    <string name="error_speech_failed">Could not understand. Please try again.</string>
+    <string name="error_screenshot_denied">Screen capture permission denied.</string>
+    <string name="error_screenshot_failed">Screenshot failed. Please try again.</string>
+    <string name="error_invalid_response">Received an unexpected response from NIA backend.</string>
+
+    <!-- TTS responses -->
+    <string name="tts_screenshot_done">Done. I took the screenshot.</string>
+    <string name="tts_reminder_done">Done. I\'ve set your reminder.</string>
+    <string name="tts_cancelled">Got it — I\'ve cancelled that action.</string>
+</resources>

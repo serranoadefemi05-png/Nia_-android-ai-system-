@@ -1,0 +1,27 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# NIA Android — local.properties.example
+#
+# Copy this file to android/local.properties and fill in your values.
+# local.properties is in .gitignore — NEVER commit it.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Android SDK location.
+# Android Studio sets this automatically when you open the project.
+# Example (macOS):
+sdk.dir=/Users/yourname/Library/Android/sdk
+# Example (Linux):
+# sdk.dir=/home/yourname/Android/Sdk
+# Example (Windows):
+# sdk.dir=C\:\\Users\\yourname\\AppData\\Local\\Android\\sdk
+
+# ─── NIA Backend ─────────────────────────────────────────────────────────────
+
+# URL of the NIA FastAPI backend.
+# Emulator connects to the host machine at 10.0.2.2.
+NIA_BACKEND_URL=http://10.0.2.2:8000
+
+# Physical device on the same Wi-Fi network:
+# NIA_BACKEND_URL=http://192.168.1.42:8000
+
+# Production (HTTPS required for non-emulator builds):
+# NIA_BACKEND_URL=https://api.nia.yourdomain.com

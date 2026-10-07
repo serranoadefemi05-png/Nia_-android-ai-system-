@@ -1,0 +1,67 @@
+# ── Secrets — NEVER commit these ────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+backend/env.example   # keep the template, never the filled file
+
+# Android signing — NEVER commit keystores
+android/app/*.jks
+android/app/*.keystore
+android/local.properties
+android/keystore.properties
+
+# Recovery files
+.circle/
+**/recovery_file.dat
+**/recovery_file*.dat
+
+# ── Node / JS ────────────────────────────────────────────────────────────────
+node_modules/
+dist/
+.vite/
+*.local
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.eggs/
+.venv/
+venv/
+env/
+.python-version
+dist/
+build/
+htmlcov/
+.coverage
+.pytest_cache/
+*.sqlite
+*.db
+
+# ── Android build artifacts ──────────────────────────────────────────────────
+android/.gradle/
+android/app/build/
+android/build/
+android/**/*.apk
+android/**/*.aab
+android/**/*.ap_
+
+# ── IDE / editors ────────────────────────────────────────────────────────────
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+/tmp/
+
+# ── Foundry / contracts ──────────────────────────────────────────────────────
+contracts/out/
+contracts/cache/
