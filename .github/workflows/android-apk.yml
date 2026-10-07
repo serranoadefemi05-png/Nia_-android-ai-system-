@@ -21,14 +21,34 @@ jobs:
           distribution: temurin
           java-version: "21"
 
-      - name: Check Android SDK
+      - name: Configure Android SDK tools
         run: |
           echo "ANDROID_HOME=$ANDROID_HOME"
           echo "ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT"
+
+          SDKMANAGER=$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -n 1)
+
+          if [ -z "$SDKMANAGER" ]; then
+            echo "ERROR: sdkmanager was not found"
+            find "$ANDROID_HOME/cmdline-tools" -maxdepth 4 -type f | head -100
+            exit 1
+          fi
+
+          SDKMANAGER_DIR=$(dirname "$SDKMANAGER")
+
+          echo "Found sdkmanager at: $SDKMANAGER"
+          echo "SDKMANAGER_DIR=$SDKMANAGER_DIR" >> "$GITHUB_ENV"
+          echo "$SDKMANAGER_DIR" >> "$GITHUB_PATH"
+
+      - name: Check Android SDK
+        run: |
+          echo "Using sdkmanager:"
+          which sdkmanager
           sdkmanager --version
 
       - name: Accept Android SDK licenses
-        run: yes | sdkmanager --licenses || true
+        run: |
+          yes | sdkmanager --licenses || true
 
       - name: Install required Android SDK packages
         run: |
