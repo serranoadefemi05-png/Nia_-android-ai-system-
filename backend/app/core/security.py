@@ -69,18 +69,18 @@ def decode_token(token: str) -> dict[str, Any]:
 
 # Prompt injection patterns — block common LLM injection attempts at the API boundary
 _INJECTION_PATTERNS = [
-    r"(?i)ignore\s+(all\s+)?(previous|prior|above)\s+(instructions?|prompts?|context)",
-    r"(?i)you\s+are\s+now\s+",
-    r"(?i)act\s+as\s+(a\s+)?",
-    r"(?i)new\s+system\s+prompt",
-    r"(?i)disregard\s+(all\s+)?",
-    r"(?i)forget\s+everything",
-    r"(?i)jailbreak",
-    r"(?i)DAN\s+mode",
-    r"(?i)<\s*system\s*>",
-    r"(?i)\[system\]",
+    r"ignore\s+(all\s+)?(previous|prior|above)\s+(instructions?|prompts?|context)",
+    r"you\s+are\s+now\s+",
+    r"act\s+as\s+(a\s+)?",
+    r"new\s+system\s+prompt",
+    r"disregard\s+(all\s+)?",
+    r"forget\s+everything",
+    r"jailbreak",
+    r"DAN\s+mode",
+    r"<\s*system\s*>",
+    r"\[system\]",
 ]
-_INJECTION_RE = re.compile("|".join(_INJECTION_PATTERNS))
+_INJECTION_RE = re.compile("|".join(_INJECTION_PATTERNS), re.IGNORECASE)
 
 MAX_INPUT_LENGTH = 4096
 
